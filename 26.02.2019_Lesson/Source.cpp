@@ -1,7 +1,8 @@
 ﻿#include <iostream>
 #include <iomanip>
-#include<math.h>
+//#include<math.h>
 #include<ctime>
+#include <cstdlib>
 
 using namespace std;
 
@@ -172,7 +173,7 @@ int main()
 
 
 				cout << "Enter 0 to exit" << endl;
-				cout << "Enter 1 to exit" << endl;
+				cout << "Enter 1 to continue" << endl;
 				
 				cin >> choice;
 
@@ -182,7 +183,7 @@ int main()
 					cin >> a >> act >> b;
 					int index = determine_index(action, act);
 					if (index == -1) cout << "try again!" << endl;
-					cout << p[index](a, b) << endl;
+					else if (index >= 0 && index < 4) cout << p[index](a, b) << endl;
 				}
 			}
 		}
